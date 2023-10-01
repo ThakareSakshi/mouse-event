@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+   <section id="section-area" onmousemove="displayPos(event)" >
+  
+        <div class="box-container">
+            <span>Mouse X position(px)</span>
+            <div class="box" id="posx"></div>
+        </div>
+        <div class="box-container">
+            <span>Mouse Y position(px)</span>
+            <div class="box" id="posy"></div>
+        </div>
+        
+   
+   </section>
+   <script>
+    function displayPos(event){
+        let x = event.clientX;
+        let y = event.clientY;
+
+        document.getElementById("posx").innerHTML=x;
+        document.getElementById("posy").innerHTML=y;
+
+    }
+   </script>
+</body>
+</html>
